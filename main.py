@@ -17,9 +17,16 @@ def count_words(words):
   return len(loose_words)
 
 def count_letters(words):
-  lowercase = "".join(words.split()).lower()
+  character_dictionary = {}
+  lowercase = "".join(words.lower())
 
-  return lowercase, type(lowercase)
+  for character in lowercase:
+    if character not in character_dictionary:
+      character_dictionary.update({character: 1})
+    else:
+      character_dictionary[character] += 1
+
+  return character_dictionary
 
 
 
