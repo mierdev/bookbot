@@ -4,9 +4,9 @@ def main():
   book_words = get_book_text(book_file)
   amount_of_words = count_words(book_words)
   amount_of_letters = count_letters(book_words)
-  list_of_characters = convert_to_list_of_dictionaries(amount_of_letters)
+  sorted_list_of_characters = convert_to_list_of_dictionaries(amount_of_letters)
 
-  report(book_file, book_title, amount_of_words, list_of_characters)
+  report(book_file, book_title, amount_of_words, sorted_list_of_characters)
 
 def get_book_text(book):
   with open(book) as text:
@@ -29,14 +29,17 @@ def count_letters(words):
 
   return character_dictionary
 
+def sort_on(dictionary):
+    return dictionary["count"]
+
 def convert_to_list_of_dictionaries(characters_count):
   list_of_characters = []
   for each in characters_count:
-    #list_of_characters.append({each: characters_count[each]})
     list_of_characters.append({"character": each, "count": characters_count[each]})
   
+  list_of_characters.sort(reverse=True, key=sort_on)
+  
   return list_of_characters
-
 
 def report(book_path, book_title, words_count, characters_count):
   print(f"--- Begin report of {book_path} ---")
@@ -47,7 +50,7 @@ def report(book_path, book_title, words_count, characters_count):
   print(f"Amount of words in this book: {words_count}")
   
   print("\n")
-
+  
   for each in characters_count:
    print(f"The '{each["character"]}' character was found {each["count"]} times")
 
