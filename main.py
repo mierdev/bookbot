@@ -5,8 +5,7 @@ def main():
   amount_of_words = count_words(book_words)
   amount_of_letters = count_letters(book_words)
 
-  print(f"{book_title} has {amount_of_words} words!")
-  print(amount_of_letters)
+  report(book_file, book_title, amount_of_words, amount_of_letters)
 
 def get_book_text(book):
   with open(book) as text:
@@ -21,12 +20,31 @@ def count_letters(words):
   lowercase = "".join(words.lower())
 
   for character in lowercase:
-    if character not in character_dictionary:
-      character_dictionary.update({character: 1})
-    else:
-      character_dictionary[character] += 1
+    if character.isalpha() == True:
+      if character not in character_dictionary:
+        character_dictionary.update({character: 1})
+      else:
+        character_dictionary[character] += 1
 
   return character_dictionary
+
+def report(book_path, book_title, words_count, characters_count):
+  print(f"--- Begin report of {book_path} ---")
+  
+  print("\n\n")
+
+  print(f"Book title: {book_title}")
+  print(f"Amount of words in this book: {words_count}")
+  
+  print("\n\n")
+
+  
+  for each in characters_count:
+    print(f"The '{each}' character was found {characters_count[each]} times")
+
+  print("\n\n")
+
+  print("--- End report ---")
 
 
 
