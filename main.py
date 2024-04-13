@@ -32,26 +32,26 @@ def count_letters(words):
 def convert_to_list_of_dictionaries(characters_count):
   list_of_characters = []
   for each in characters_count:
-    list_of_characters.append({each: characters_count[each]})
+    #list_of_characters.append({each: characters_count[each]})
+    list_of_characters.append({"character": each, "count": characters_count[each]})
   
   return list_of_characters
 
 
 def report(book_path, book_title, words_count, characters_count):
   print(f"--- Begin report of {book_path} ---")
-  
-  print("\n\n")
+
+  print("\n")
 
   print(f"Book title: {book_title}")
   print(f"Amount of words in this book: {words_count}")
   
-  print("\n\n")
+  print("\n")
 
-  for element in characters_count:
-   for key, value in element.items():
-      print(f"The '{key}' character was found {value} times")
+  for each in characters_count:
+   print(f"The '{each["character"]}' character was found {each["count"]} times")
 
-  print("\n\n")
+  print("\n")
 
   print("--- End report ---")
 
