@@ -1,23 +1,15 @@
 import sys
-from get_data import get_doc_text, get_words
+from get_and_check_data import check_user_input, get_doc_text, get_words
 from stats import word_count, character_count, sorted_character_count_list
 from report import print_report
 
 
 def main():
-    # check if user added path to document
-    if len(sys.argv) < 2:
-        print("Please define a path to the document you want to analyze.")
-        print("")
-        print("Usage:")
-        print("python3 main.py <path_to_book>")
-        print("")
-        sys.exit(1)
+    # check if user added a path to the document
+    check_user_input()
 
-    # get document path
+    # set variables
     path_to_doc: str = sys.argv[1]
-
-    # get document text & words
     doc_text: str = get_doc_text(f"{path_to_doc}")
     doc_words: list = get_words(doc_text)
 
@@ -30,4 +22,6 @@ def main():
     print_report(path_to_doc, doc_word_count, sorted_doc_character_count)
 
 
-main()
+# run main.py
+if __name__ == "__main__":
+    main()
