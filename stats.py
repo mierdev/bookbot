@@ -1,8 +1,9 @@
-def word_count(book_words: list) -> int:
-    count_words: int = len(book_words)
+def word_count(doc_words: list) -> int:
+    count_words: int = len(doc_words)
     return count_words
 
 
+# TODO: REFACTOR
 def character_count(words: list) -> dict:
     character_count: dict = {}
     for word in words:
