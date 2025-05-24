@@ -13,6 +13,6 @@ A few of the learning goals are:
 - Put your Python and Git skills to the test in a real project
 - Refactoring
 
-# Guided projects
+## Guided projects
 
 Guided projects are designed to get you *out* of tutorial hell, by writing a ton of code and giving you challenges to solve on your own (you are given a few hints, but the rest is on you and Google).
