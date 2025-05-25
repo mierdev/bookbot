@@ -15,7 +15,15 @@ A few of the learning goals are:
 
 ## Usage
 
-`python3 main.py <path_to_book>`
+Clone the repo:
+```bash
+git clone git@github.com:mierdev/bookbot.git
+```
+
+Run the program:
+```bash
+python3 main.py <path_to_book>
+```
 
 ## Guided projects
 
