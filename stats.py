@@ -1,21 +1,23 @@
 # count all the words in a document
-def word_count(doc_words: list) -> int:
+def word_count(doc_words: list[str]) -> int:
     count_words: int = len(doc_words)
     return count_words
 
 
-# count all tge characters in a document
+# count all the characters in a document
 def character_count(doc_text: str) -> dict:
     count_characters: dict[str, str] = {}
     for character in doc_text.lower():
-        count_characters[character] = count_characters.get(character, 0) + 1
+        if character.isalpha():
+            count_characters[character] = count_characters.get(character, 0) + 1
     return count_characters
 
 
-# TODO: UNDERSTAND WHAT THIS DOES
-# sort all character counts alphabetically
-def sorted_character_count_list(character_count: dict) -> list[str]:
-    sorted_list: list = sorted(
-        character_count.items(), key=lambda x: x[1], reverse=True
+# TODO: UNDERSTAND THIS
+# sort all character counts from high to low
+def character_count_sorted(character_count: dict) -> list[str]:
+    original_list: list[tuple] = character_count.copy()
+    sorted_list: list[tuple] = sorted(
+        original_list.items(), key=lambda x: x[1], reverse=True
     )
     return sorted_list

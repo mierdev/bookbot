@@ -4,8 +4,6 @@ def print_report(path: str, word_count: int, character_count: list):
     print("----------- Word Count ----------")
     print(f"Found {word_count} total words")
     print("--------- Character Count -------")
-    # TODO: REFACTER, THIS LOGIC SHOULD BE IN STATS (character count)
-    for each in character_count:
-        if each[0].isalpha():
-            print(f"{each[0]}: {each[1]}")
+    for character in character_count:
+        print(f"{character[0]}: {character[1]}")
     print("============= END ===============")
