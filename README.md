@@ -4,7 +4,7 @@ BookBot is my first [Boot.dev](https://www.boot.dev) project!
 
 ## About
 
-"Book Bot" - a Python program that can analyze an entire book (or any other text document) and print out an interesting statistical report. 
+"Book Bot" - a Python program that can analyze an entire book (or any other `.txt` document) and print out an interesting statistical report. 
 
 A few of the learning goals are:
 - Configure a professional Python development environment on your local computer
@@ -12,6 +12,10 @@ A few of the learning goals are:
 - Learn how to use a professional code editor (VS Code)
 - Put your Python and Git skills to the test in a real project
 - Refactoring
+
+## Usage
+
+`python3 main.py <path_to_book>`
 
 ## Guided projects
 
