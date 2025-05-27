@@ -5,7 +5,7 @@ from report import print_report
 
 
 def main():
-    # check if user added a path to the document
+    # check if user added a valid path to the document
     check_user_input()
 
     # set variables
