@@ -13,16 +13,7 @@ def character_count(doc_text: str) -> dict:
     return count_characters
 
 
-# sorting key for character count
-def sorting_key(dict):
-    return dict["num"]
-
-
 # sort all character counts from high to low
 def character_count_sorted(character_count: dict) -> list[str]:
     original_dictonary: dict[str, str] = character_count.copy()
-    sorted_list: list[dict] = []
-    for each in original_dictonary:
-        sorted_list.append({"char": each, "num": original_dictonary[each]})
-    sorted_list.sort(reverse=True, key=sorting_key)
-    return sorted_list
+    return sorted(original_dictonary.items(), key=lambda sort: sort[1], reverse=True)
