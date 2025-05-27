@@ -34,6 +34,7 @@ Guided projects are designed to get you *out* of tutorial hell, by writing a ton
 - Use type hints.
 - Use pure functions.
 - Use the `.get()` method to add characters to a dictionary in the `character_count` function.
+- Use the `.items()` method and a `lambda` function to sort the characters on value (descending).
 - Check if the document at the by the user defined path exists.
 - Changed `main.py` to only set variables and execute functions. This was done by adding two more scripts and moving functions out of `main.py`:
   - `get_and_check_data.py`
