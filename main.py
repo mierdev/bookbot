@@ -1,6 +1,6 @@
 import sys
 from get_and_check_data import check_user_input, get_doc_text
-from stats import word_count, character_count, character_count_sorted
+from stats import word_count, character_count, sort_dictionary
 from report import print_report
 
 
@@ -16,7 +16,7 @@ def main():
     # get stats
     doc_word_count: int = word_count(doc_words)
     doc_character_count: dict = character_count(doc_text)
-    doc_character_count_sorted: list = character_count_sorted(doc_character_count)
+    doc_character_count_sorted: list = sort_dictionary(doc_character_count)
 
     # print report
     print_report(path_to_doc, doc_word_count, doc_character_count_sorted)

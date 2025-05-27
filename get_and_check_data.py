@@ -14,7 +14,7 @@ def check_user_input():
     if os.path.exists(sys.argv[1]):
         pass
     else:
-        print("\nSadly, this document does not exist...\n")
+        print("\nOh nooo! 😭\nThis document does not exist...\n")
         sys.exit(1)
 
 

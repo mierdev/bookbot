@@ -13,7 +13,10 @@ def character_count(doc_text: str) -> dict:
     return count_characters
 
 
-# sort all character counts from high to low
-def character_count_sorted(character_count: dict) -> list[str]:
-    original_dictonary: dict[str, str] = character_count.copy()
-    return sorted(original_dictonary.items(), key=lambda sort: sort[1], reverse=True)
+# sort dictionary (descending)
+def sort_dictionary(unsorted_dictionary: dict) -> list[str]:
+    copy_unsorted_dictionary: dict[str, str] = unsorted_dictionary.copy()
+    # .items() gets all the items in a dictionary in the form (key, value) so you can then do [1] to sort by the values as opposed to the keys
+    return sorted(
+        copy_unsorted_dictionary.items(), key=lambda sort: sort[1], reverse=True
+    )
