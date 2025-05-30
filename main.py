@@ -4,7 +4,7 @@ from stats import word_count, character_count, sort_dictionary
 from report import print_report
 
 
-def main():
+def main() -> None:
     # check if user added a valid path to the document
     check_user_input()
 

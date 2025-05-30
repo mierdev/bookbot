@@ -1,9 +1,5 @@
 # Book Bot
 
-Book Bot is my first [Boot.dev](https://www.boot.dev) project!
-
-## About
-
 "Book Bot" - a Python program that can analyze an entire book (or any other `.txt` document) and print out an interesting statistical report. 
 
 A few of the learning goals are:
@@ -27,7 +23,7 @@ python3 main.py <path_to_book>
 
 ## "Guided" projects
 
-Guided projects are designed to get you *out* of tutorial hell, by writing a ton of code and giving you challenges to solve on your own (you are given a few hints, but the rest is on you and Google).
+Book Bot is my first [Boot.dev](https://www.boot.dev) project! "Guided" projects are designed to get you *out* of tutorial hell, by writing a ton of code and giving you challenges to solve on your own (you are given a few hints, but the rest is on you and Google).
 
 ## Changes made on the original project
 
