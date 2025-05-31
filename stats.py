@@ -1,7 +1,12 @@
-# count all the words in a document
-def word_count(doc_words: list[str]) -> int:
-    count_words: int = len(doc_words)
-    return count_words
+# strip words from punctuation
+def strip_words(doc_words: list[str]) -> list:
+    copy_doc_words: list = doc_words.copy()
+    stripped_words: list = []
+    for word in copy_doc_words:
+        word_stripped = word.strip("„“”,.-!:;#$*%<>_+=[]{}()|~`? ")
+        if word_stripped.isalpha():
+            stripped_words.append(word_stripped)
+    return stripped_words
 
 
 # count all the characters in a document
@@ -11,6 +16,32 @@ def character_count(doc_text: str) -> dict:
         if character.isalpha():
             count_characters[character] = count_characters.get(character, 0) + 1
     return count_characters
+
+
+# count all the words in a document
+def word_count_all(doc_words: list[str]) -> int:
+    count_words: int = len(doc_words)
+    return count_words
+
+
+# count individual words in a document
+def word_count_individual(doc_words: list[str]) -> dict:
+    copy_doc_words: list[str] = doc_words
+    count_individual_words: dict[str, str] = {}
+    for word in copy_doc_words:
+        lowercase = word.lower()
+        count_individual_words[lowercase] = count_individual_words.get(lowercase, 0) + 1
+    return count_individual_words
+
+
+# top 10 words
+def top_ten_words(words_sorted: dict[str, str]) -> list:
+    copy_words_sorted: dict[str, str] = words_sorted.copy()
+    top_ten: list[()] = []
+    for word in copy_words_sorted:
+        if len(top_ten) < 10:
+            top_ten.append(word)
+    return top_ten
 
 
 # sort dictionary (descending)

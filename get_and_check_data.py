@@ -21,5 +21,5 @@ def check_user_input():
 # get all the text from a document
 def get_doc_text(file_path: str) -> str:
     with open(file_path) as doc:
-        doc_contents = doc.read()
+        doc_contents: str = doc.read()
     return doc_contents
