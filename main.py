@@ -23,10 +23,12 @@ def main() -> None:
 
     # get stats
     doc_word_count_all: int = word_count_all(doc_words_stripped)
-    doc_word_count_individual: dict = word_count_individual(doc_words_stripped)
-    doc_word_count_sorted: list = sort_dictionary(doc_word_count_individual)
-    top_ten: list = top_ten_words(doc_word_count_sorted)
-    doc_character_count: dict = character_count(doc_text)
+    doc_word_count_individual: dict[str, str] = word_count_individual(
+        doc_words_stripped
+    )
+    doc_word_count_sorted: list[tuple] = sort_dictionary(doc_word_count_individual)
+    top_ten: list[tuple] = top_ten_words(doc_word_count_sorted)
+    doc_character_count: dict[str, str] = character_count(doc_text)
     doc_character_count_sorted: list = sort_dictionary(doc_character_count)
 
     # print report
