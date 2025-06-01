@@ -2,10 +2,6 @@
 
 "Book Bot" - a Python program that can analyze an entire book (or any other `.txt` document) and print out an interesting statistical report. 
 
-## Features
-
-TODO: readme example: https://github.com/nallovint/custom_wordcloud
-
 ## Usage
 
 Clone the repo:
