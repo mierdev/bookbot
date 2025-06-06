@@ -14,9 +14,9 @@ Run the program:
 python3 main.py <path_to_book>
 ```
 
-## Boot.dev projects
+## About this project
 
-Book Bot is my first [Boot.dev](https://www.boot.dev) project. Their projects are designed to get you *out* of tutorial hell, by writing a ton of code and giving you challenges to solve on your own (you are given a few hints, but the rest is on you and Google).
+This project is part of the [Boot.dev](https://www.boot.dev) curriculum. Their projects are designed to actually train you like a ***Junior Developer***, by writing a ton of code and giving you challenges to solve on your own (you are given a few hints, but the rest is on you and Google).
 
 ## Changes made on the original project
 
